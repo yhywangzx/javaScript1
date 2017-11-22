@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Anthor" content="阿飞老师" />
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+            #box{ }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <script>
+
+            var goudan = 50;
+
+            var arr = [
+                1,
+                2,
+                3,
+                goudan,
+                [
+                    7,
+                    8,
+                    9,
+                    [
+                        4,
+                        5,
+                        6,
+                        function(){alert("click");}
+                    ]
+                ]
+            ];
+
+
+
+            //alert( arr );
+
+            //alert( arr[4][3][1] );
+
+            document.onclick = arr[4][3][3];
+
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <!-- 声明当前页面编码集：gbk gb2313中文编码 utf-8国际编码 -->
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+    <title>作业二 - QQ发表</title>
+    <meta name="Keywords" content="关键词,关键词" />
+    <meta name="description" content="描述" />
+    <style>
+        *{margin:0;padding:0;}
+        a{text-decoration:none;}
+        ul{list-style:none;}
+        .clearfix:after{content:'';display:block;clear:both;}
+        #box{
+            width:500px;
+            margin:50px auto 0;
+        }
+        #box-1{
+            width:478px;
+            padding:10px;
+            border:1px solid #bbb;
+            background:#eee;
+            border-radius:5px;
+        }
+        #txt{
+            width:100%;
+            height:100px;
+            font-size:12px;
+            resize:none;
+            border:1px solid #bbb;
+            outline: none;
+        }
+        #box-1 #imgBox{
+            padding:3px;
+            background:#fff;
+            width:35px;
+            height:35px;
+            border:1px solid #999;
+            float:left;
+            cursor:pointer;
+            position:relative;
+        }
+        #box-1 #imgBox #img2{
+            display:none;
+        }
+        #box-1 #imgBox img{
+            position:absolute;
+            top:3px;
+            left:3px;
+        }
+        #sub{
+            width:80px;
+            height:30px;
+            border-radius:4px;
+            background:#f60;
+            color:#fff;
+            line-height:30px;
+            text-align:center;
+            float:right;
+            margin-top:5px;
+            font-size:14px;
+            cursor:pointer;
+            outline: none;
+            border: none;
+        }
+        #list{
+            margin-top:20px;
+        }
+        #list li{
+            list-style:none;
+            border-bottom:1px solid #ccc;
+            overflow:hidden;
+            min-height: 40px;
+            padding-bottom: 10px;
+            margin-bottom:10px;
+        }
+        #list li img{
+            float:left;
+        }
+        #list li p{
+            float:right;
+            width:450px;
+            font-size:12px;
+        }
+        #list li:hover{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="box">
+    <div id="box-1" class="clearfix">
+        <textarea id="txt"></textarea>
+        <div id="imgBox">
+            <img src="images/1.jpg" width="35" height='35' id='img1' />
+            <img src="images/2.jpg" width="35" height='35' id='img2'  />
+        </div>
+        <button id="sub">发表</button>
+    </div>
+    <ul id="list"></ul>
+</div>
+
+<script>
+
+    var oImg1 = document.getElementById('img1');
+    var oImg2 = document.getElementById('img2');
+    var oTxt = document.getElementById('txt');
+    var oSub = document.getElementById('sub');
+    var oList = document.getElementById('list');
+
+    var imgNum = oImg1.src;
+
+    oImg1.onclick = function(){
+        this.style.display = 'none';
+        oImg2.style.display = 'block';
+        imgNum = oImg2.src;
+    };
+    oImg2.onclick = function(){
+        this.style.display = 'none';
+        oImg1.style.display = 'block';
+        imgNum = oImg1.src;
+    };
+
+    oSub.onclick = function(){
+        var val = oTxt.value;
+        if ( val != '')
+        {
+            oTxt.value = '';
+            oList.innerHTML += '<li class="clearfix"><img src="'+ imgNum +'" width="40" hieght="40"/><p>'+ val +'</p></li>';
+        }else {
+            alert("请输入发表内容！");
+        }
+    };
+
+</script>
+
+</body>
+</html>

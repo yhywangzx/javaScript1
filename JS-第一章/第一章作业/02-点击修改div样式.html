@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>点击修改div样式</title>
+    <meta charset="gbk">
+    <meta name="Author" content="潭州学院-阿飞老师">
+    <style type='text/css'>
+        *{ margin:0; padding:0; font-family:'Microsoft yahei';}
+
+        #box{
+            width:100px;
+            height:100px;
+            background:red;
+            border:1px solid #ddd;
+            margin:10px 0 0 10px;
+            transition: .5s;
+        }
+        #btn{
+            width:57px;
+            height:24px;
+            margin-left:10px;
+            cursor: pointer;
+        }
+        #cover{
+            position:fixed;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            background:rgba(0,0,0,.2);
+            display: none;
+        }
+        #cover .show{
+            position:absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width:220px;
+            height:150px;
+            padding:25px 70px;
+            background:#fff;
+            border-radius:3px;
+            text-align: center;
+        }
+        #cover .show p{
+            margin-bottom: 17px;
+            font-size: 14px;
+        }
+        #cover .show p i{
+            font-style: normal;
+        }
+        #cover .show p span{
+            display: inline-block;
+            width: 48px;
+            height: 20px;
+            border:1px solid #ccc;
+            margin-left: 8px;
+            text-align: center;
+            cursor: pointer;
+        }
+        #done{
+            width:57px;
+            height:24px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<input type="button" value='点我！' id="btn" />
+<div id="cover">
+    <div class="show">
+        <p>
+            <i>颜色</i>
+            <span id='s1' style='background:red;'></span>
+            <span id='s2' style='background:green;'></span>
+            <span id='s3' style='background:blue;'></span>
+        </p>
+        <p>
+            <i>宽度</i>
+            <span id='s4'>100px</span>
+            <span id='s5'>200px</span>
+            <span id='s6'>300px</span>
+        </p>
+        <p>
+            <i>高度</i>
+            <span id='s7'>100px</span>
+            <span id='s8'>200px</span>
+            <span id='s9'>300px</span>
+        </p>
+        <input type="button" id='done' value='完成' />
+    </div>
+</div>
+<script>
+    var oBtn = document.getElementById("btn");
+    var oCover = document.getElementById("cover");
+    var oDone = document.getElementById("done");
+    var oBox = document.getElementById("box");
+
+    oBtn.onclick = function(){
+      oCover.style.display = 'block';
+    };
+    oDone.onclick = function(){
+        oCover.style.display = 'none';
+    };
+
+    document.getElementById("s1").onclick = bg;
+    document.getElementById("s2").onclick = bg;
+    document.getElementById("s3").onclick = bg;
+
+    function bg() {
+        oBox.style.backgroundColor = this.style.background;
+    };
+
+    document.getElementById("s4").onclick = width;
+    document.getElementById("s5").onclick = width;
+    document.getElementById("s6").onclick = width;
+
+    function width() {
+        oBox.style.width = this.innerHTML;
+    };
+
+    document.getElementById("s7").onclick = height;
+    document.getElementById("s8").onclick = height;
+    document.getElementById("s9").onclick = height;
+
+    function height() {
+        oBox.style.height = this.innerHTML;
+    };
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Anthor" content="阿飞老师" />
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+            #box{ }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <script>
+
+            /*
+            对象后面的 . 操作，可以用 [] 的形式来代替
+             */
+
+            //var oBox = document.getElementById("box");
+
+            var oBox = document['getElementById']("box");
+
+            //oBox.innerHTML = "<p>1234</p>";
+            // ===>
+            //oBox["innerHTML"] = "<p>1234</p>";
+            // ===>
+            var x = "innerHTML";
+            oBox[x] = "<p>789</p>";
+
+
+
+
+            //oBox["x"] = "<p>1234</p>"; //这是不行的
+            //oBox.x = "<p>1234</p>"; //相当于自定义属性
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

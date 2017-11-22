@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Anthor" content="阿飞老师" />
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+
+        </style>
+    </head>
+    <body>
+
+        <script>
+
+            /*
+            一个对象下面不存在的属性，在运用的时候，只会是undefind 不会报错
+
+            一个直接的变量，当不存在的时候(没有var)会报错
+
+            自定义属性
+
+
+            * 全局的变量，和对象 . 的属性，即使同名，也没有任何关系
+            * 一个对象可以通过.操作添加一个原本没有的属性用来存值
+            * 一个对象下面不存在的属性，在运用的时候，只会是undefind 不会报错
+
+
+             */
+
+            var goudan = 2;
+
+            var obj = {};
+            obj.goudan = 1;
+
+            alert( obj.uuuu );
+
+            //alert( goudan );
+
+
+
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

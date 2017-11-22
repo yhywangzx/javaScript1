@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Anthor" content="阿飞老师" />
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+            #box{ }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <p>二狗子</p>
+        </div>
+
+        <div id="wrap"></div>
+        <script>
+
+            //var o = document.getElementById("box");
+            //alert( o.innerHTML ); //会得到所有的内容，包括子标签
+            //alert( o.innerText );//只会得到文本内容，不会包括子标签
+
+            var o = document.getElementById("wrap");
+
+            //o.innerHTML = "<p>我是p</p>"; //会解析p标签，
+            o.innerText = "<p>我是p</p>"; //不会解析标签，会以文本的形式将标签展示出来
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

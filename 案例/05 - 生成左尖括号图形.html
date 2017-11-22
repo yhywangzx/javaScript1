@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <!-- 声明当前页面编码集：gbk gb2313中文编码 utf-8国际编码 -->
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'/>
+    <meta name="Keywords" content="关键词,关键词"/>
+    <meta name="description" content="描述"/>
+    <meta name="Author" content="王子祥"/>
+    <title> -王子祥</title>
+
+    <style type='text/css'>
+        * {margin: 0;padding: 0;}
+        a {text-decoration: none;}
+        ul {list-style: none;}
+        #box{
+            margin: 100px auto;
+            border: 1px dotted #000;
+            position: relative;
+        }
+        #box p{
+            width: 50px;
+            height: 50px;
+            background: pink;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    var oBox = document.getElementById("box");
+    var str = "";
+    var num = 7;
+    var mid = num/2 -0.5;
+    for(var i =0;i<num;i++){
+        var mLeft = i < mid ? i*50 : (num-i-1)*50;
+        str += "<p style='margin-left:"+ mLeft +"px;'>"+i+"</p>";
+    }
+    oBox.innerHTML = str;
+</script>
+</body>
+</html>

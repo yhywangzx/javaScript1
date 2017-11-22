@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+    <!-- 声明当前页面编码集：gbk gb2313中文编码 utf-8国际编码 -->
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'/>
+    <meta name="Keywords" content="关键词,关键词"/>
+    <meta name="description" content="描述"/>
+    <meta name="Author" content="王子祥"/>
+    <title> -王子祥</title>
+
+    <style type='text/css'>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+        #box{
+            width: 450px;
+            margin: 50px auto;
+        }
+        #box h1{
+            font-size: 12px;
+            border-bottom: 1px dashed #000;
+        }
+        #box ul li{
+            float: left;
+            height: 20px;
+            line-height: 20px;
+            text-indent: 25px;
+            margin-right: 25px;
+            font-size: 12px;
+            background: url("images/ckbg1.jpg") no-repeat;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        #box ul li.choose{
+            background-image: url("images/ckbg2.jpg");
+        }
+
+        .a{
+            color: #f60;
+        }
+
+        .h{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <h1>你最喜欢的水果</h1>
+    <ul>
+        <li class="a g">猕猴桃</li>
+        <li class="b h">提子</li>
+        <li>乌拉</li>
+        <li>心艾</li>
+        <li class="e">无虑</li>
+        <li class="h">木马</li>
+        <li class="k">朝歌</li>
+    </ul>
+</div>
+<script>
+    var oBox = document.getElementById("box"),
+        aLi = document.getElementsByTagName("li"),
+        length = aLi.length;
+
+    for(var i =0;i<length;i++){
+        aLi[i].lastName = aLi[i].className;
+        aLi[i].onclick = function () {
+            if( this.className === this.lastName){
+                this.className += " choose";
+            }else{
+                this.className = this.lastName;
+            }
+        }
+    }
+</script>
+</body>
+</html>

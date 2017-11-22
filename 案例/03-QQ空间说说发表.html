@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+    <!-- 声明当前页面编码集：gbk gb2313中文编码 utf-8国际编码 -->
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'/>
+    <meta name="Keywords" content="关键词,关键词"/>
+    <meta name="description" content="描述"/>
+    <meta name="Author" content="王子祥"/>
+    <title> -王子祥</title>
+
+    <style type='text/css'>
+        * {margin: 0;padding: 0;}
+        a {text-decoration: none;}
+        ul {list-style: none;}
+        #box{
+            width: 375px;
+            margin: 100px auto;
+        }
+        #box .wrap{
+            width: 100%;
+            height: 100px;
+            padding-top: 6px;
+            background: #ccc;
+            border-radius: 5px;
+        }
+        #txt{
+            display: block;
+            width: 360px;
+            height: 60px;
+            margin: 0 auto;
+            resize: none;
+            outline: none;
+        }
+        .wrap p{
+            float: left;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            padding: 2px;
+            background: #fff;
+            margin-left: 12px;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+        .wrap p img{
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+        }
+        #btn{
+            float: right;
+            width: 65px;
+            height: 23px;
+            margin-right: 10px;
+            background: #f60;
+            color: #fff;
+            font-weight: bold;
+            line-height: 23px;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 6px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        #list{
+            margin-top: 50px;
+        }
+        #list li{
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+            margin: 5px 0;
+            padding: 5px 0;
+        }
+        #list li img{
+            float: left;
+            width: 30px;
+            height: 30px;
+        }
+        #list li p{
+            float: right ;
+            width: 320px;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+
+    <div class="wrap">
+        <textarea id="txt"></textarea>
+        <p id="img">
+            <img src="images/1.jpg" id="img1" />
+            <img style="display: none" src="images/2.jpg" id="img2" />
+        </p>
+        <span id="btn">发表</span>
+    </div>
+
+    <ul id="list">
+        <!--
+        <li>
+            <img src="img/1.jpg" />
+            <p>啥啥啥是谁所</p>
+        </li>
+        -->
+    </ul>
+
+</div>
+    <script>
+         var oImg = document.getElementById("img"),
+             oImg1 = document.getElementById("img1"),
+             oImg2 = document.getElementById("img2"),
+             oBtn = document.getElementById("btn"),
+             oTxt = document.getElementById("txt"),
+             oList = document.getElementById("list");
+
+         var bool = true;
+         oImg.onclick = function () {
+             if(bool){
+                 oImg1.style.display = 'none';
+                 oImg2.style.display = 'block';
+             }else{
+                 oImg1.style.display = 'block';
+                 oImg2.style.display = 'none';
+              }
+             bool = !bool;
+         }
+
+         oBtn.onclick = function () {
+             var oValue = oTxt.value;
+
+             if(bool){
+                var src = oImg1.src;
+             }else{
+                 var src = oImg2.src;
+             }
+
+
+             oList.innerHTML += "<li>" +
+                 "<img src='"+ src +"' alt=''>" +
+                 "<p>"+ oValue +"</p>"+
+             "</li>"
+             oTxt.value = '';
+
+         }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Anthor" content="阿飞老师" />
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+            #box{ }
+        </style>
+    </head>
+    <body>
+
+        <div id="box" class="goudan" title="123"></div>
+
+        <a href="" id="link"></a>
+
+        <script>
+
+            /*
+            js操作合法标签属性
+                . 操作
+
+                class不能直接操作，要换成 className
+
+                style比较特殊，我们后面讲样式操作的时候再讲
+             */
+
+            var x = document.getElementById( "box" );
+
+            x.id = "wangdachui";
+
+            x.title = "阿飞123";
+
+            x.className = "npc vip";
+
+            document.getElementById( "link" ).name = "l789";
+
+
+            var xTitle = x.title;
+            alert( xTitle );
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

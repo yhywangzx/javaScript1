@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Anthor" content="阿飞老师" />
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+            #box{ }
+        </style>
+    </head>
+    <body>
+        <div id="box" afei="handsome"></div>
+        <script>
+            /*
+            针对于自定义标签属性， . 操作无效
+
+                .getAttribute()    获取
+                .setAttribute()    设置
+                .removeAttribute()   移除
+             */
+            var obj = document.getElementById( "box" );
+
+            //alert( obj.afei );
+
+            //obj.afei = "ugly";
+
+            //var a = "afei";
+
+            //var x = obj.getAttribute( "afei" );
+
+            //alert( x );
+
+            //obj.setAttribute( "afei" , "lovely" );
+            //obj.setAttribute( "zhaoge" , "lovely" );
+
+            obj.removeAttribute("afei"); //移除属性
+            //obj.setAttribute( "afei" , "" ); //清空值
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

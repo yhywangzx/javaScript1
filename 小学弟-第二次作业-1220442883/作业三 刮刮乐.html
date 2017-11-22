@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Anthor" content="阿飞老师" />
+    <title>Title</title>
+    <style>
+        *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+        li{ list-style-type: none;}
+        #box{
+            border:1px solid gray;
+            margin:100px auto;
+        }
+        #box p{
+            width:100%;
+            height:50px;
+        }
+        #box p span{
+            display: inline-block;
+            width:50px;
+            height:100%;
+            background:#ccc;
+        }
+        #box p span.active{
+            background-color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var oBox = document.getElementById("box"),
+            oWidth = 10,
+            oHeight = 10;
+
+        oBox.style.width=oWidth*50+"px";
+        oBox.style.height=oHeight*50+"px";
+
+        var str="";
+        for (var i = 0; i < oHeight; i++) {
+            var str2="";
+            for (var j = 0; j < oWidth; j++) {
+                str2+="<span></span>";
+            }
+            str+="<p>"+str2+"</p>";
+        }
+        oBox.innerHTML=str;
+        var aSpan=oBox.getElementsByTagName("span");
+        var length=aSpan.length;
+    //    alert(length);
+        for(var i=0;i<length;i++){
+            aSpan[i].onmousemove=function(){
+                if(!this.className){
+                    this.className="active";
+                }
+            };
+        }
+    </script>
+</body>
+</html>
+
+

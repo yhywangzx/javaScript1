@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+    <!-- 声明当前页面编码集：gbk gb2313中文编码 utf-8国际编码 -->
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+    <title>QQ空间左侧导航</title>
+    <meta name="Keywords" content="关键词,关键词" />
+    <meta name="description" content="描述" />
+    <style type='text/css'>
+        *{margin:0;padding:0;}
+        a{text-decoration:none;}
+        ul{list-style:none;}
+        #menu{
+            position:relative;
+            width: 164px;
+            margin: 100px 200px;
+            padding: 2px;
+            border:1px solid #f0f0f0;
+            height: 200px;
+            overflow:hidden;
+        }
+        #menu h2{
+            position: relative;
+            height: 35px;
+            line-height: 35px;
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+            background: rgb(240,240,240);
+        }
+        #menu h2 i{
+            position: absolute;
+            left: 26px;
+            top: 8px;
+            height: 18px;
+            width: 18px;
+            background: url("images/qqbg.png") no-repeat -379px -155px;
+        }
+        #nav{
+            font-size: 12px;
+        }
+        #nav li{
+            position: relative;
+            height: 35px;
+            line-height: 35px;
+            text-indent: 50px;
+            cursor:pointer;
+        }
+        #nav li i{
+            position: absolute;
+            left: 23px;
+            top: 8px;
+            width: 18px;
+            height: 18px;
+            background: url("images/qqbg.png") no-repeat;
+        }
+        #nav li i.i1{ background-position:-198px -50px;}
+        #nav li i.i2{ background-position:-276px -285px;}
+        #nav li i.i3{ background-position:-562px -51px;}
+        #nav li i.i4{ background-position:-250px -26px;}
+        #nav li i.i5{ background-position:-484px -233px;}
+        #nav li i.i6{ background-position:-536px -260px;}
+        #nav li i.i7{ background-position:-561px -184px;}
+        #nav li i.i8{ background-position:-563px -285px;}
+        #nav li i.i9{ background-position:-589px -1px;}
+        #nav li i.i10{ background-position:-511px -182px;}
+        #nav li i.i11{ background-position:-511px -231px;}
+        #nav li:hover{
+            background:  rgb(240,240,240);
+        }
+        #btn{
+            position:absolute;
+            top:184px;
+            left:0;
+            width:168px;
+            height:20px;
+            background:url(images/but.jpg);
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <h2><i></i>好友动态</h2>
+        <ul id='nav'>
+            <li><i class='i1'></i>特别关心</li>
+            <li><i class='i2'></i>与我相关</li>
+            <li><i class='i3'></i>直播广场</li>
+            <li><i class='i4'></i>那年今日</li>
+            <li><i class='i5'></i>游戏应用</li>
+            <li><i class='i6'></i>我的收藏</li>
+            <li><i class='i7'></i>微云备份</li>
+            <li><i class='i8'></i>企鹅FM</li>
+            <li><i class='i9'></i>QQ阅读</li>
+            <li><i class='i10'></i>实名朋友</li>
+            <li><i class='i11'></i>认证空间</li>
+        </ul>
+        <div id="btn"></div>
+    </div>
+    <script>
+        var oMain = document.getElementById("menu");
+        var oBtn = document.getElementById("btn");
+
+        oBtn.onclick = function(){
+            oMain.style.height = 'auto';
+            oBtn.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

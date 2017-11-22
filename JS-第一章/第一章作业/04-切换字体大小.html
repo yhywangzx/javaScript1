@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <!-- 声明当前页面编码集：gbk gb2313中文编码 utf-8国际编码 -->
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8' />
+    <title>切换字体大小</title>
+    <meta name="Keywords" content="关键词,关键词" />
+    <meta name="description" content="描述" />
+    <style type='text/css'>
+        *{margin:0;padding:0;}
+        a{text-decoration:none;}
+        ul{list-style:none;}
+        #wrap{
+            width: 1000px;
+            margin: 50px auto;
+        }
+        button{
+            width: 50px;
+            height: 20px;
+        }
+        #content{
+            font-size: 14px;
+        }
+        #content p{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+            <button id="up">+</button>
+            <button id="down">-</button>
+
+        <div id="content">
+            <p>2016年5月12日上午9点，央视二套（CCTV-2）“财经资讯”栏目组到访潭州。此次“来自改革创新一线的报道”的主题采访在全国各地收集创新创业一线企业和团队典型，而潭州教育是湖南地区的第一家企业也是重要一站。</p>
+            <p>潭州教育成立于2007年，于2015年10月正式入驻长沙国家高新技术产业开发区麓谷芯城信息产业园区，是一家典型性的创新创业的“互联网+教育”企业。在市委市政府及长沙高新区的大力支持下，潭州教育得到了飞速的发展，已经成为一家具有一定影响力的跨品类的综合性直播在线教育企业。</p>
+            <p>2016年5月12日上午9点，央视二套（CCTV-2）“财经资讯”栏目组到访潭州。此次“来自改革创新一线的报道”的主题采访在全国各地收集创新创业一线企业和团队典型，而潭州教育是湖南地区的第一家企业也是重要一站。</p>
+            <p>潭州教育成立于2007年，于2015年10月正式入驻长沙国家高新技术产业开发区麓谷芯城信息产业园区，是一家典型性的创新创业的“互联网+教育”企业。在市委市政府及长沙高新区的大力支持下，潭州教育得到了飞速的发展，已经成为一家具有一定影响力的跨品类的综合性直播在线教育企业。</p>
+            <p>2016年5月12日上午9点，央视二套（CCTV-2）“财经资讯”栏目组到访潭州。此次“来自改革创新一线的报道”的主题采访在全国各地收集创新创业一线企业和团队典型，而潭州教育是湖南地区的第一家企业也是重要一站。</p>
+            <p>潭州教育成立于2007年，于2015年10月正式入驻长沙国家高新技术产业开发区麓谷芯城信息产业园区，是一家典型性的创新创业的“互联网+教育”企业。在市委市政府及长沙高新区的大力支持下，潭州教育得到了飞速的发展，已经成为一家具有一定影响力的跨品类的综合性直播在线教育企业。</p>
+        </div>
+
+
+    </div>
+    <script>
+        var oUp = document.getElementById("up");
+        var oDown = document.getElementById("down");
+        var oContent = document.getElementById("content");
+        var size = 14;
+        oUp.onclick = function(){
+            size = size + 1;
+            oContent.style.fontSize = size+"px";
+        }
+        oDown.onclick = function(){
+            size = size - 1;
+            oContent.style.fontSize = size+"px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="Anthor" content="阿飞老师" />
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+
+            #box.goudan{
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+                margin-left: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <script>
+
+            /*var oBox = document.getElementById("box");
+            //oBox.className = "ooo";
+            oBox.setAttribute("class" , "ooo");*/
+
+            /*
+            为了见名知意，
+                oBox   ===>  object box
+                一眼就能认出是一个JS对象 / 节点对象
+
+            复合属性的驼峰写法
+
+            尽量操作精准的子属性，比如修改背景颜色操作backgroundColor而不是background
+
+            目前浏览器允许  节点.style="样式"  的直接操作，但是最好不要这样，使用  节点.style.cssText = 样式 来代替;
+
+             */
+
+            var oBox = document.getElementById("box");
+
+            //oBox.style = "width:100px;height:100px;background:pink;";
+            //oBox.className = "a       b";
+
+            //alert( oBox.style.height ); //单个行内样式的获取
+            //alert( oBox.style.cssText ); //获取行内样式的所有文本
+            //这种方式只能获取行内样式的值,如何获取样式表里面的样式，后面的内容再讲
+            //alert( oBox.style.height );
+
+            /*oBox.style.height = "500px";
+            oBox.style.width = "200px";
+            oBox.style.backgroundColor = "pink";
+            oBox.style.marginLeft = "100px";*/
+
+            //oBox.style.float = "left";
+
+            oBox.style.styleFloat = "left"; //以前 给IE的兼容写法
+            oBox.style.cssFloat = "left"; //以前 给其他浏览器的兼容写法
+
+            //操作多条样式：
+            //oBox.style.cssText += "width:200px;height:100px;background-color:pink;margin-left:100px;";
+
+            //oBox.className = "goudan";
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
